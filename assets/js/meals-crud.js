@@ -67,7 +67,7 @@ function refreshMealsList() {
     fetch('https://soup-back.mybluemix.net/meals', options)
         .then(response => response.json())
         .then(json => {
-            const meals = json.result;
+            const meals = json.result.reverse();
 
             meals.forEach(meal => {
                 list.innerHTML += `

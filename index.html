@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/styles/app-bar.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/ico" href="assets/images/soup.png"/>
     <title>Soupe à L'Oignon</title>
@@ -91,7 +93,7 @@
         </div>
         <div class="modal-footer">
             <button id="close" class="text-button">Cancel</button>
-            <button class="text-button" onclick="(() => {postMeal(); closeModalById('meal-modal')})();">Save</button>
+            <button class="text-button" onclick="(() => {postMeal(); closeMealModal()})();">Save</button>
         </div>
     </div>
 </div>

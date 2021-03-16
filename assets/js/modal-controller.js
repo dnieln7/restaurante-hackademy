@@ -8,6 +8,10 @@ mealTrigger.onclick = function () {
     mealModal.style.display = "block";
 }
 mealClose.onclick = function () {
+    document.getElementById("name").value = '';
+    document.getElementById("description").value = '';
+    document.getElementById("price").value = '';
+    document.getElementById("picture").value = '';
     mealModal.style.display = "none";
 }
 
@@ -17,6 +21,10 @@ window.onclick = function (event) {
     }
 }
 
-function closeModalById(id) {
-    document.getElementById(id).style.display = "none";
+function closeMealModal() {
+    document.getElementById("name").value = '';
+    document.getElementById("description").value = '';
+    document.getElementById("price").value = '';
+    document.getElementById("picture").value = '';
+    document.getElementById("meal-modal").style.display = "none";
 }
