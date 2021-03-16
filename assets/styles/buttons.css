@@ -33,6 +33,7 @@
     color: var(--primary);
     text-transform: uppercase;
     font-size: large;
+    font-family: 'Kurale', serif;
     border: 1px solid transparent;
     cursor: pointer;
     outline: none;

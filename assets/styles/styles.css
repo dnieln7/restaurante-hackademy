@@ -19,6 +19,8 @@ body {
     margin: 0;
     background: var(--background);
     height: 100vh;
+
+    font-family: 'Kurale', serif;
 }
 
 .banner-container {
