@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="assets/styles/modal.css">
     <link rel="stylesheet" href="assets/styles/listview.css">
     <link rel="stylesheet" href="assets/styles/buttons.css">
@@ -36,7 +38,7 @@
 <div class="actions-container">
     <a class="rounded-button" href="#">Order Now</a>
     <div class="divider"></div>
-    <a class="rounded-outline-button" href="#deals-list">Special Deals</a>
+    <a class="rounded-outline-button" href="#">Special Deals</a>
 </div>
 
 <div id="meal-list" class="listview"></div>
@@ -87,8 +89,10 @@
                 <div class="expand">
                     <input id="price" class="text-field-outline" type="number" placeholder="Price">
                 </div>
-                <label for="picture">Picture:</label>
-                <input id="picture" class="file-field-outline" type="file" accept="image/png">
+                <div class="row">
+                    <label for="picture">Picture:</label>
+                    <input id="picture" class="file-field-outline" type="file" accept="image/png">
+                </div>
             </form>
         </div>
         <div class="modal-footer">

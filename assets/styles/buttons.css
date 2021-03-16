@@ -45,3 +45,25 @@
     border: 1px solid var(--primary-light-max);
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1000px) {
+    .rounded-button {
+        text-decoration: none;
+        font-size: medium;
+        padding: 0.5em 1em;
+        border-radius: 4em;
+        background: var(--primary);
+        color: var(--white);
+        transition: 500ms ease;
+    }
+
+    .rounded-outline-button {
+        text-decoration: none;
+        font-size: medium;
+        padding: 0.5em 1em;
+        border-radius: 4em;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        transition: 500ms ease;
+    }
+}

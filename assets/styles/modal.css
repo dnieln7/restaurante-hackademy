@@ -81,7 +81,14 @@
 }
 
 label {
+    margin-right: 0.5em;
     font-size: large;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 @keyframes falling {
@@ -92,5 +99,17 @@ label {
     to {
         top: 0;
         opacity: 1
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .file-field-outline {
+        width: 100%;
     }
 }

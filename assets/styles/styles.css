@@ -90,8 +90,13 @@ body {
 
 @media screen and (max-width: 1000px) {
     .banner-container {
-        height: 25%;
+        height: 50%;
         padding-top: calc(var(--app-bar-height) + 4em);
         flex-direction: column;
+    }
+
+    .banner-container p {
+        margin: 0 0.5em;
+        font-size: xx-large;
     }
 }

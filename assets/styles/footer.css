@@ -28,3 +28,30 @@
     width: 2em;
     margin-left: 1em;
 }
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        padding: 1.5em;
+
+        flex-direction: column;
+        font-size: small;
+    }
+
+    .footer p {
+        font-size: smaller;
+        order: 1;
+    }
+
+    .footer .info {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer .info a {
+        margin-bottom: 0.5em;
+    }
+
+    .footer .info img {
+        margin: 0.5em 1em 0.5em 0;
+    }
+}
