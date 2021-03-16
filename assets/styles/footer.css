@@ -1,0 +1,30 @@
+.footer {
+    padding: 3em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--white-95);
+    font-size: medium;
+    color: var(--white-46);
+}
+
+.footer .info {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .info a {
+    text-decoration: none;
+    color: var(--white-46);
+}
+
+.footer .info img {
+    width: 2em;
+    margin-left: 1em;
+}

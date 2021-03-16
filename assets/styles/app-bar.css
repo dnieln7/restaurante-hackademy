@@ -1,0 +1,86 @@
+.app-bar {
+    width: 100%;
+    height: var(--app-bar-height);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    box-shadow: var(--shadow-active);
+    transition: background 500ms;
+}
+
+.app-bar .content {
+    height: 100%;
+
+    padding: 0 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-bar .content img {
+    height: 100%;
+}
+
+.app-bar .content .nav-icon {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.app-bar .content .nav-icon > span {
+    font-size: 2em;
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+#hamburger-nav:checked ~  .nav-menu {
+    display: flex;
+}
+
+.app-bar .content .nav-menu {
+    width: 100%;
+    height: calc(100vh - var(--app-bar-height));
+
+    padding: 32px;
+    background: var(--background);
+
+    position: fixed;
+    top: var(--app-bar-height);
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+.app-bar .content .nav-menu a {
+    padding: 16px;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, var(--white) 50%, var(--white-95) 50%) right;
+    background-size: 200%;
+    color: var(--dark);
+    font-size: larger;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 500ms, padding-left 500ms;
+}
+
+.app-bar .content .nav-menu a:hover {
+    padding-left: 32px;
+    background-position: left;
+}
+
+.darken-background {
+    background: var(--primary);
+}
+
+.lighten-foreground {
+    color: var(--white) !important;
+}

@@ -1,0 +1,94 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.32);
+    overflow: auto;
+}
+
+.modal-content {
+    width: 80%;
+
+    margin: 10% auto 0 auto;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: falling;
+    animation-duration: 500ms;
+}
+
+.modal-header {
+    padding-left: 1em;
+    padding-right: 0.5em;
+    font-size: x-large;
+    border-bottom: 1px solid var(--white-46);
+}
+
+.modal-body {
+    padding: 1em;
+}
+
+.modal-footer {
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid var(--white-46);
+}
+
+.modal-footer button {
+    margin-left: 0.5em;
+}
+
+.expand {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.expand .text-field-outline {
+    padding: 1em;
+
+    flex-grow: 1;
+
+    font-size: medium;
+    font-weight: normal;
+    border: 1px solid var(--white-46);
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.text-field-outline:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+}
+
+.file-field-outline {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: medium;
+}
+
+label {
+    font-size: large;
+}
+
+@keyframes falling {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
