@@ -10,12 +10,39 @@ class Meal {
 
 let file = undefined;
 
-function postMeal() {
+window.onload = () => {
     const reqOptions = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({username: 'admin', password: 'ilikecats'})
+    };
+
+
+    fetch('https://soup-back.mybluemix.net/auth/login', reqOptions)
+        .then(response => response.json())
+        .then(json => {
+            if (json.successful) {
+                window.localStorage.setItem('token', json.result.token);
+            }
+        });
+}
+
+function postMeal() {
+    const token = window.localStorage.getItem('token');
+
+    if (!token) {
+        return alert('You are not authenticated');
+    }
+
+    const reqOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Authorization': 'Bearer ' + token
         }
     };
 
@@ -40,10 +67,10 @@ function postMeal() {
                     meal.picture = url;
                     reqOptions.body = JSON.stringify(meal);
 
-                    fetch('https://soup-back.mybluemix.net/meals', reqOptions)
+                    fetch('https://soup-back.mybluemix.net/meals/admin', reqOptions)
                         .then(response => response.json())
                         .then(json => {
-                            if(json.successful) {
+                            if (json.successful) {
                                 refreshMealsList();
                             }
                         });
